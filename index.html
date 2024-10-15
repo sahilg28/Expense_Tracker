@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="./app.js" defer></script>
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-title">Expense Tracker</div>
+    </nav>
+
+    <header class="container">
+        <div class="main-title flex">
+            <div class="dashborad-title">
+                <h1 class="title">Dashboard</h1>
+                <p>Hello! Sahil, Welcome Back.</p>
+            </div>
+            <div class="reset-btn flex" id="reset">Reset</div>
+        </div>
+
+        <main class="dashboard">
+            <div class="budgetSection flex">
+                <div class="total-balnace flex fl-col">
+                    <p>Your Balance</p>
+                    <h1 id="balance-amount">Rs 00,000.00</h1>
+                </div>
+                <div class="addBudget flex fl-col">
+                    <div class="budget-title">Budget</div>
+                    <form class="flex fl-col">
+                        <input type="number" class="input-feild" id="budgetAmount" placeholder="Enter your budget.." autofocus>
+                        <button class="primary-btn flex" id="addBudget">Add Budget</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="expenseSection flex">
+                <div class="expense-list-card flex fl-col">
+                    <div class="income-expense-cards flex">
+                        <div class="incomeCard flex fl-col">
+                            <h2>Current Amount</h2>
+                            <h1 id="currentAmount">Rs 00,000</h1>
+                        </div>
+                        <div class="expenseCard flex fl-col">
+                            <h2>Expense</h2>
+                            <h1 id="expenseAmount">Rs 00,000</h1>
+                        </div>
+                    </div>
+                    <div class="main-title">
+                        <h2>Expense List:</h2>
+                    </div>
+                    <ul class="listITems flex fl-col" id="expenseList"></ul>
+                </div>
+
+                <div class="addExpense flex fl-col">
+                    <div class="expense-title">Add Expense</div>
+                    <form class="flex fl-col expenseForm">
+                        <div>
+                            <label>Expense Title:</label>
+                            <input type="text" class="input-feild" id="expTitle" placeholder="Enter your expense title.." required maxlength="15" autocomplete="off">
+                        </div>
+                        <div>
+                            <label>Expense Description:</label>
+                            <input type="text" class="input-feild" id="expDesc" placeholder="Enter your expense Desc.." required maxlength="30" autocomplete="off">
+                        </div>
+                        <div>
+                            <label>Expense Amount:</label>
+                            <input type="number" class="input-feild" id="expAmount" placeholder="Enter your expense.." required autocomplete="off">
+                        </div>
+                        <div>
+                            <label>Current Date:</label>
+                            <input type="date" class="input-feild" id="date" required autocomplete="off">
+                        </div>
+                        <button class="primary-btn flex" id="addExpense">Add Expense</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </header>
+
+    <footer class="flex container">
+        <div class="footer-text">Copyright © 2024 - All right reserved | Sahil Gupta</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="./gsap.js"></script>
+</body>
+
+</html>
